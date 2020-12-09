@@ -23,10 +23,8 @@ interface Coffee {
 
 class SimpleCoffee implements Coffee {
 
-    @Override
     public double getCost() { return 1.0; }
 
-    @Override
     public String getInternal() { return "coffee bean"; }
 }
 
@@ -36,12 +34,10 @@ abstract class Decorator implements Coffee {
         this.coffee = coffee;
     }
 
-    @Override
     public double getCost() {
         return coffee.getCost();
     }
 
-    @Override
     public String getInternal() {
         return coffee.getInternal();
     }
